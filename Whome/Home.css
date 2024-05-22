@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poetsen One", sans-serif;
+}
+body
+{
+    background-color: black;
+}
+nav
+{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+}
+.R{
+  color: black;
+}
+.R:hover
+{
+    color: rgb(155, 0, 0);
+    font-size: 15px;
+
+}
+ul li
+{
+    display: inline-block;
+    padding: 0px 20px;
+}
+a
+{
+    color: white;
+    text-decoration: none;
+}
+a:hover
+{
+    color: gold;
+}
+video{
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-color: black;
+
+}
+article {
+    position: relative;
+    width: 250px;
+    transition: all 0.3s ease;
+  }
+  
+  article img:first-child {
+    box-shadow: 0 60px 60px -60x rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  article img:last-child {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: 0.3s ease;
+    opacity: 0;
+  }
+  
+  article:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+  }
+  
+  article::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 10%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0) 95%
+    );
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  article:hover::before {
+    opacity: 1;
+  }
+  
+  article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+.container
+{
+    height: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.card{
+    height: 350px;
+    width: 300px;
+    margin: 10px;
+    transition: 300ms;
+}
+
+.personaje, .personaje_2, .personaje_3{
+    height: 350px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-color: rgb(255, 255, 255);
+    transition: 300ms;
+    position: absolute;
+}
+
+.imagen_personaje{
+    height: 210px;
+    width: 300px;
+  background-image: url(Img/FerrariRojo.png);
+  background-size: cover;
+  margin-bottom: 200px;
+  transition: 300ms;
+  filter: drop-shadow(5px -4px 10px rgb(0, 0, 0)); 
+}
+
+.imagen_personaje_2{
+  height: 210px;
+  width: 400px;
+background-image: url(Img/BugattiAzul.png);
+background-size: cover;
+margin-bottom: 200px;
+transition: 300ms;
+filter: drop-shadow(5px -4px 10px rgb(0, 0, 0)); 
+}
+
+.imagen_personaje_3{
+  height: 200px;
+  width: 300px;
+background-image: url(Img/Raptor.png);
+background-size: cover;
+margin-bottom: 200px;
+cursor: auto;
+transition: 300ms;
+filter: drop-shadow(5px -4px 10px rgb(0, 0, 0)); 
+}
+
+.detalle, .detalle_2, .detalle_3{
+  height: 200px;
+  width: 300px;
+  background-color: gold;
+  position: absolute;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-top: 150px;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: 300ms;
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+.card:hover .imagen_personaje{
+  transform: translateY(-40px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(Img/FerrariAzul.png);
+}
+
+.card:hover .imagen_personaje_2{
+  transform: translateY(-40px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(Img/p11-removebg-preview.png);
+}
+
+
+.card:hover .imagen_personaje_3{
+  transform: translateY(-40px);
+  transition: 300ms;
+  filter: none;
+  background-image: url(Img/RaptorN.png);
+}
+
+.card:hover .personaje{
+  background-image:  radial-gradient(white,blue);
+}
+
+.card:hover .personaje_2{
+  background-image:  radial-gradient(white,red);
+}
+
+.card:hover .personaje_3{
+  background-image:  radial-gradient(white,black);
+}
+
+h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p{
+  margin: auto;
+  width: 90%;
+  font-size: 12px;
+}
